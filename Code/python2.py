@@ -239,6 +239,7 @@ def eight(input,  a):
 
 
 def nine(string1, string2):
+
     can_it_be_made = True
     biggest_string = string1
     smallest_string = string2
@@ -247,11 +248,7 @@ def nine(string1, string2):
         biggest_string = string2
         smallest_string = string1
 
-    print('big', biggest_string, 'small', smallest_string)
     for i in smallest_string:
-        print("b ", list(biggest_string).count(i), " ", i)
-        print("s ", list(smallest_string).count(i), " ", i)
-
         if list(biggest_string).count(i) < list(smallest_string).count(i):
             can_it_be_made = False
 
