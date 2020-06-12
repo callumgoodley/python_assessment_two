@@ -240,20 +240,17 @@ def eight(input,  a):
 
 def nine(string1, string2):
     can_it_be_made = True
-    dict1 = {}
-    dict2 = {}
-
-    smallest_string = string1
-    biggest_string = string2
-
-    if len(string2) > len(string1):
-        smallest_string = string2
-        biggest_string = string1
-
-    for i in smallest_string:
-        dict1[i] = 1
-
-    return print(dict1)
+    biggest_string = string1
+    smallest_string = string2
+    if string2 > string1:
+        biggest_string = string2
+        smallest_string = string1
+    print('big', biggest_string, 'small', smallest_string)
+    for i in biggest_string:
+        print(i)
+        if list(smallest_string).count(i) < list(biggest_string).count(i):
+            can_it_be_made = False
+    return can_it_be_made
 
     # <QUESTION 10>
 
